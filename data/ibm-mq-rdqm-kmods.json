@@ -6,7 +6,7 @@
     "(C) Copyright IBM Corp. 2023 All Rights Reserved.",
     "US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp. "
   ],
-  "lastUpdated": "2026-08-20T15:32:32+00:00",
+  "lastUpdated": "2026-08-21T15:08:22+00:00",
   "kernelLevels": {
     "3.10.0-1160.81.1": {
       "status": "Compatible",
@@ -9374,24 +9374,50 @@
       },
       "status": "Compatible",
       "comments": ""
+    },
+    "3.10.0-1160.157.1": {
+      "compatibleMqVRMs": {
+        "9.2.0": {
+          "testedVrmf": "9.2.0.43",
+          "drbdKmod": "kmod-drbd-9.2.15_3.10.0_1160-1",
+          "minVrmf": "9.2.0.7"
+        },
+        "9.3.0": {
+          "testedVrmf": "9.3.0.37",
+          "drbdKmod": "kmod-drbd-9.2.15_3.10.0_1160-1",
+          "minVrmf": "9.3.0.0"
+        },
+        "9.1.0": {
+          "testedVrmf": "9.1.0.34",
+          "drbdKmod": "kmod-drbd-9.0.32_3.10.0_1160-1",
+          "minVrmf": "9.1.0.0"
+        },
+        "9.3.x": {
+          "testedVrmf": "9.3.5.0",
+          "drbdKmod": "kmod-drbd-9.2.7+ptf.14.gdc5453714_3.10.0_1160-1",
+          "minVrmf": "9.3.0.0"
+        }
+      },
+      "status": "Compatible",
+      "comments": ""
     }
   },
   "latestKnownCompatibleKernelLevels": {
     "9.1.0": {
-      "RHEL7": "3.10.0-1160.119.1"
+      "RHEL7": "3.10.0-1160.157.1"
     },
     "9.2.0": {
-      "RHEL7": "3.10.0-1160.146.1",
+      "RHEL7": "3.10.0-1160.157.1",
       "RHEL8": "4.18.0-553.155.1",
       "RHEL9": "5.14.0-687.41.1"
     },
     "9.3.0": {
-      "RHEL7": "3.10.0-1160.146.1",
+      "RHEL7": "3.10.0-1160.157.1",
       "RHEL8": "4.18.0-553.155.1",
       "RHEL9": "5.14.0-687.41.1"
     },
     "9.3.x": {
-      "RHEL7": "3.10.0-1160.119.1",
+      "RHEL7": "3.10.0-1160.157.1",
       "RHEL8": "4.18.0-553.125.1",
       "RHEL9": "5.14.0-611.55.1"
     },
