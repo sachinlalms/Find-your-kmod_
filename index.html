@@ -227,7 +227,8 @@
     <p class="sub">Pick your Linux kernel version and your IBM MQ version. This looks up the exact <span class="mono">kmod-drbd</span> package IBM has tested for that combination — straight from IBM's own compatibility file.</p>
     <div class="meta-row">
       <span>Source: <a href="https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/messaging/mqadv/ibm-mq-rdqm-kmods.json" target="_blank" rel="noopener">ibm-mq-rdqm-kmods.json</a> (mirrored daily into this repo)</span>
-      <span id="lastUpdated">IBM file dated: <b>loading…</b></span>
+      <span id="lastUpdated">IBM's file dated: <b>loading…</b></span>
+      <span id="lastChecked"></span>
       <span id="entryCount"></span>
     </div>
   </header>
@@ -520,9 +521,21 @@
     populateControls(mqVersions);
     renderTable();
     const d = new Date(json.lastUpdated);
-    lastUpdatedEl.innerHTML = 'IBM file dated: <b>' + (isNaN(d) ? escapeHtml(json.lastUpdated) : d.toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'})) + '</b>';
+    lastUpdatedEl.innerHTML = "IBM's file dated: <b>" + (isNaN(d) ? escapeHtml(json.lastUpdated) : d.toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'})) + '</b>';
     entryCountEl.textContent = Object.keys(json.kernelLevels).length.toLocaleString() + ' kernel builds tracked';
   }
+
+  function showLastChecked(ts){
+    const lastCheckedEl = document.getElementById('lastChecked');
+    if (!ts){ lastCheckedEl.textContent = ''; return; }
+    const d = new Date(ts);
+    lastCheckedEl.innerHTML = 'We last checked IBM: <b>' + (isNaN(d) ? escapeHtml(ts) : d.toLocaleString(undefined,{year:'numeric',month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'})) + '</b>';
+  }
+
+  fetch('./data/last-checked.json')
+    .then(r => r.ok ? r.json() : null)
+    .then(j => showLastChecked(j && j.lastChecked))
+    .catch(() => showLastChecked(null));
 
   function showUnavailable(err){
     lastUpdatedEl.innerHTML = 'IBM file dated: <b style="color:var(--danger)">unavailable</b>';
