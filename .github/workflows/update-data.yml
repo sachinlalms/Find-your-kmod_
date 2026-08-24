@@ -2,8 +2,10 @@ name: Update IBM MQ RDQM kmod data
 
 on:
   schedule:
+    # Runs once a day at 06:00 UTC. IBM updates this file infrequently,
+    # so daily is plenty — change the cron if you want it more/less often.
     - cron: '0 6 * * *'
-  workflow_dispatch: {}
+  workflow_dispatch: {}   # lets you trigger it manually from the Actions tab
   push:
     branches: [main]
     paths:
@@ -25,16 +27,25 @@ jobs:
           curl -sSL --fail \
             -o data/ibm-mq-rdqm-kmods.json \
             https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/messaging/mqadv/ibm-mq-rdqm-kmods.json
+          # Sanity check: make sure it's actually JSON with the key we expect
           python3 -c "import json,sys; d=json.load(open('data/ibm-mq-rdqm-kmods.json')); assert 'kernelLevels' in d, 'unexpected file shape'; print(len(d['kernelLevels']), 'kernel entries found')"
+          # Record that we actually checked today, even if IBM's content didn't change.
+          printf '{"lastChecked":"%s"}\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > data/last-checked.json
 
-      - name: Commit and push if the data changed
+      - name: Commit and push if anything changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/ibm-mq-rdqm-kmods.json
-          if git diff --staged --quiet; then
-            echo "No changes — IBM's file hasn't been updated."
+          git add data/ibm-mq-rdqm-kmods.json data/last-checked.json
+          if git diff --staged --quiet -- data/ibm-mq-rdqm-kmods.json; then
+            DATA_CHANGED=0
           else
-            git commit -m "chore: refresh IBM MQ RDQM kmod data ($(date -u +%Y-%m-%d))"
-            git push
+            DATA_CHANGED=1
           fi
+          if [ "$DATA_CHANGED" = "1" ]; then
+            git commit -m "chore: refresh IBM MQ RDQM kmod data ($(date -u +%Y-%m-%d))"
+          else
+            echo "IBM's data hasn't changed — committing just the last-checked timestamp."
+            git commit -m "chore: confirm no change from IBM ($(date -u +%Y-%m-%d))" -- data/last-checked.json
+          fi
+          git push
