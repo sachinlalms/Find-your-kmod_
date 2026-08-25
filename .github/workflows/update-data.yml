@@ -37,15 +37,20 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/ibm-mq-rdqm-kmods.json data/last-checked.json
+
           if git diff --staged --quiet -- data/ibm-mq-rdqm-kmods.json; then
             DATA_CHANGED=0
           else
             DATA_CHANGED=1
           fi
+
           if [ "$DATA_CHANGED" = "1" ]; then
             git commit -m "chore: refresh IBM MQ RDQM kmod data ($(date -u +%Y-%m-%d))"
-          else
+            git push
+          elif ! git diff --staged --quiet -- data/last-checked.json; then
             echo "IBM's data hasn't changed — committing just the last-checked timestamp."
             git commit -m "chore: confirm no change from IBM ($(date -u +%Y-%m-%d))" -- data/last-checked.json
+            git push
+          else
+            echo "Nothing changed at all (data or timestamp) — nothing to commit."
           fi
-          git push
