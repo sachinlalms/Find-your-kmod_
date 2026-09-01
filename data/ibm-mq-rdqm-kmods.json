@@ -6,7 +6,7 @@
     "(C) Copyright IBM Corp. 2023 All Rights Reserved.",
     "US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp. "
   ],
-  "lastUpdated": "2026-08-27T09:09:34+00:00",
+  "lastUpdated": "2026-09-01T09:44:11+00:00",
   "kernelLevels": {
     "3.10.0-1160.81.1": {
       "status": "Compatible",
@@ -9457,6 +9457,37 @@
         "10.0.0": {
           "testedVrmf": "10.0.0.0",
           "drbdKmod": "kmod-drbd-9.3.1_5.14.0_687.5.1-1",
+          "minVrmf": "10.0.0.0"
+        }
+      },
+      "status": "Compatible",
+      "comments": ""
+    },
+    "5.14.0-570.136.1": {
+      "compatibleMqVRMs": {
+        "9.2.0": {
+          "testedVrmf": "9.2.0.43",
+          "drbdKmod": "kmod-drbd-9.2.15_5.14.0_570.12.1-1",
+          "minVrmf": "9.2.0.0"
+        },
+        "9.3.0": {
+          "testedVrmf": "9.3.0.41",
+          "drbdKmod": "kmod-drbd-9.2.18_5.14.0_570.35.1-1",
+          "minVrmf": "9.3.0.0"
+        },
+        "9.4.0": {
+          "testedVrmf": "9.4.0.25",
+          "drbdKmod": "kmod-drbd-9.2.18_5.14.0_570.35.1-1",
+          "minVrmf": "9.4.0.0"
+        },
+        "9.4.x": {
+          "testedVrmf": "9.4.5.2",
+          "drbdKmod": "kmod-drbd-9.2.16_5.14.0_570.35.1-1",
+          "minVrmf": "9.4.5.0"
+        },
+        "10.0.0": {
+          "testedVrmf": "10.0.0.0",
+          "drbdKmod": "kmod-drbd-9.3.1_5.14.0_570.35.1-1",
           "minVrmf": "10.0.0.0"
         }
       },
