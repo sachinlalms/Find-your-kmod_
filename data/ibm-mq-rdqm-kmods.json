@@ -6,7 +6,7 @@
     "(C) Copyright IBM Corp. 2023 All Rights Reserved.",
     "US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp. "
   ],
-  "lastUpdated": "2026-09-15T10:07:28+00:00",
+  "lastUpdated": "2026-09-17T08:07:48+00:00",
   "kernelLevels": {
     "3.10.0-1160.81.1": {
       "status": "Compatible",
@@ -9741,6 +9741,130 @@
       },
       "status": "Compatible",
       "comments": ""
+    },
+    "5.14.0-687.48.1": {
+      "compatibleMqVRMs": {
+        "9.2.0": {
+          "testedVrmf": "9.2.0.43",
+          "drbdKmod": "kmod-drbd-9.2.15_5.14.0_687.5.1-1",
+          "minVrmf": "9.2.0.7"
+        },
+        "9.3.0": {
+          "testedVrmf": "9.3.0.41",
+          "drbdKmod": "kmod-drbd-9.2.18_5.14.0_687.5.1-1",
+          "minVrmf": "9.3.0.0"
+        },
+        "9.4.0": {
+          "testedVrmf": "9.4.0.25",
+          "drbdKmod": "kmod-drbd-9.2.18_5.14.0_687.5.1-1",
+          "minVrmf": "9.4.0.0"
+        },
+        "9.4.x": {
+          "testedVrmf": "9.4.5.1",
+          "drbdKmod": "kmod-drbd-9.2.16_5.14.0_687.5.1-1",
+          "minVrmf": "9.4.1.0"
+        },
+        "10.0.0": {
+          "testedVrmf": "10.0.0.0",
+          "drbdKmod": "kmod-drbd-9.3.1_5.14.0_687.5.1-1",
+          "minVrmf": "10.0.0.0"
+        }
+      },
+      "status": "Compatible",
+      "comments": ""
+    },
+    "4.18.0-553.159.1": {
+      "compatibleMqVRMs": {
+        "9.2.0": {
+          "testedVrmf": "9.2.0.43",
+          "drbdKmod": "kmod-drbd-9.2.15_4.18.0_553-1",
+          "minVrmf": "9.2.0.7"
+        },
+        "9.3.0": {
+          "testedVrmf": "9.3.0.41",
+          "drbdKmod": "kmod-drbd-9.2.18_4.18.0_553.51.1-1",
+          "minVrmf": "9.3.0.0"
+        },
+        "9.4.0": {
+          "testedVrmf": "9.4.0.25",
+          "drbdKmod": "kmod-drbd-9.2.18_4.18.0_553.51.1-1",
+          "minVrmf": "9.4.0.0"
+        },
+        "9.4.x": {
+          "testedVrmf": "9.4.5.1",
+          "drbdKmod": "kmod-drbd-9.2.16_4.18.0_553-1",
+          "minVrmf": "9.4.1.0"
+        },
+        "10.0.0": {
+          "testedVrmf": "10.0.0.0",
+          "drbdKmod": "kmod-drbd-9.3.1_4.18.0_553-1",
+          "minVrmf": "10.0.0.0"
+        }
+      },
+      "status": "Compatible",
+      "comments": ""
+    },
+    "4.18.0-553.162.1": {
+      "compatibleMqVRMs": {
+        "9.2.0": {
+          "testedVrmf": "9.2.0.43",
+          "drbdKmod": "kmod-drbd-9.2.15_4.18.0_553-1",
+          "minVrmf": "9.2.0.7"
+        },
+        "9.3.0": {
+          "testedVrmf": "9.3.0.41",
+          "drbdKmod": "kmod-drbd-9.2.18_4.18.0_553.51.1-1",
+          "minVrmf": "9.3.0.0"
+        },
+        "9.4.0": {
+          "testedVrmf": "9.4.0.25",
+          "drbdKmod": "kmod-drbd-9.2.18_4.18.0_553.51.1-1",
+          "minVrmf": "9.4.0.0"
+        },
+        "9.4.x": {
+          "testedVrmf": "9.4.5.1",
+          "drbdKmod": "kmod-drbd-9.2.16_4.18.0_553-1",
+          "minVrmf": "9.4.1.0"
+        },
+        "10.0.0": {
+          "testedVrmf": "10.0.0.0",
+          "drbdKmod": "kmod-drbd-9.3.1_4.18.0_553-1",
+          "minVrmf": "10.0.0.0"
+        }
+      },
+      "status": "Compatible",
+      "comments": ""
+    },
+    "5.14.0-570.141.1": {
+      "compatibleMqVRMs": {
+        "9.2.0": {
+          "testedVrmf": "9.2.0.43",
+          "drbdKmod": "kmod-drbd-9.2.15_5.14.0_570.12.1-1",
+          "minVrmf": "9.2.0.0"
+        },
+        "9.3.0": {
+          "testedVrmf": "9.3.0.41",
+          "drbdKmod": "kmod-drbd-9.2.18_5.14.0_570.35.1-1",
+          "minVrmf": "9.3.0.0"
+        },
+        "9.4.0": {
+          "testedVrmf": "9.4.0.25",
+          "drbdKmod": "kmod-drbd-9.2.18_5.14.0_570.35.1-1",
+          "minVrmf": "9.4.0.0"
+        },
+        "9.4.x": {
+          "testedVrmf": "9.4.5.1",
+          "drbdKmod": "kmod-drbd-9.2.16_5.14.0_570.35.1-1",
+          "minVrmf": "9.4.5.0"
+        },
+        "10.0.0": {
+          "testedVrmf": "10.0.0.0",
+          "drbdKmod": "kmod-drbd-9.3.1_5.14.0_570.35.1-1",
+          "minVrmf": "10.0.0.0"
+        }
+      },
+      "status": "Compatible",
+      "comments": ""
     }
   },
   "latestKnownCompatibleKernelLevels": {
@@ -9749,13 +9873,13 @@
     },
     "9.2.0": {
       "RHEL7": "3.10.0-1160.157.1",
-      "RHEL8": "4.18.0-553.158.1",
-      "RHEL9": "5.14.0-687.47.1"
+      "RHEL8": "4.18.0-553.162.1",
+      "RHEL9": "5.14.0-687.48.1"
     },
     "9.3.0": {
       "RHEL7": "3.10.0-1160.157.1",
-      "RHEL8": "4.18.0-553.158.1",
-      "RHEL9": "5.14.0-687.47.1"
+      "RHEL8": "4.18.0-553.162.1",
+      "RHEL9": "5.14.0-687.48.1"
     },
     "9.3.x": {
       "RHEL7": "3.10.0-1160.157.1",
@@ -9763,16 +9887,16 @@
       "RHEL9": "5.14.0-611.55.1"
     },
     "9.4.0": {
-      "RHEL8": "4.18.0-553.158.1",
-      "RHEL9": "5.14.0-687.47.1"
+      "RHEL8": "4.18.0-553.162.1",
+      "RHEL9": "5.14.0-687.48.1"
     },
     "9.4.x": {
-      "RHEL9": "5.14.0-687.47.1",
-      "RHEL8": "4.18.0-553.158.1"
+      "RHEL9": "5.14.0-687.48.1",
+      "RHEL8": "4.18.0-553.162.1"
     },
     "10.0.0": {
-      "RHEL8": "4.18.0-553.158.1",
-      "RHEL9": "5.14.0-687.47.1"
+      "RHEL8": "4.18.0-553.162.1",
+      "RHEL9": "5.14.0-687.48.1"
     }
   },
   "latestKmodBundleFixIds": {
