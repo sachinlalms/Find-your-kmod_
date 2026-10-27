@@ -6,7 +6,7 @@
     "(C) Copyright IBM Corp. 2023 All Rights Reserved.",
     "US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp. "
   ],
-  "lastUpdated": "2026-10-23T09:47:15+00:00",
+  "lastUpdated": "2026-10-26T16:35:05+00:00",
   "kernelLevels": {
     "3.10.0-1160.81.1": {
       "status": "Compatible",
@@ -10798,6 +10798,28 @@
       },
       "status": "Compatible",
       "comments": ""
+    },
+    "6.12.0-211.68.1": {
+      "compatibleMqVRMs": {
+        "10.0.x": {
+          "testedVrmf": "10.0.1.0",
+          "drbdKmod": "kmod-drbd-9.3.3+ptf.28.g6c10a1e64888_6.12.0_211.7.1-1",
+          "minVrmf": "10.0.1.0"
+        }
+      },
+      "status": "Compatible",
+      "comments": ""
+    },
+    "6.12.0-55.113.1": {
+      "compatibleMqVRMs": {
+        "10.0.x": {
+          "testedVrmf": "10.0.1.0",
+          "drbdKmod": "kmod-drbd-9.3.3+ptf.28.g6c10a1e64888_6.12.0_55.9.1-1",
+          "minVrmf": "10.0.1.0"
+        }
+      },
+      "status": "Compatible",
+      "comments": ""
     }
   },
   "latestKnownCompatibleKernelLevels": {
@@ -10832,7 +10854,7 @@
       "RHEL9": "5.14.0-687.60.1"
     },
     "10.0.x": {
-      "RHEL10": "6.12.0-211.67.1",
+      "RHEL10": "6.12.0-211.68.1",
       "RHEL8": "4.18.0-553.177.1",
       "RHEL9": "5.14.0-687.60.1"
     }
