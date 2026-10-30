@@ -6,7 +6,7 @@
     "(C) Copyright IBM Corp. 2023 All Rights Reserved.",
     "US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp. "
   ],
-  "lastUpdated": "2026-10-28T11:29:48+00:00",
+  "lastUpdated": "2026-10-30T09:34:33+00:00",
   "kernelLevels": {
     "3.10.0-1160.81.1": {
       "status": "Compatible",
@@ -10928,6 +10928,75 @@
       },
       "status": "Compatible",
       "comments": ""
+    },
+    "6.12.0-211.69.1": {
+      "compatibleMqVRMs": {
+        "10.0.x": {
+          "testedVrmf": "10.0.1.0",
+          "drbdKmod": "kmod-drbd-9.3.3+ptf.28.g6c10a1e64888_6.12.0_211.7.1-1",
+          "minVrmf": "10.0.1.0"
+        }
+      },
+      "status": "Compatible",
+      "comments": ""
+    },
+    "6.12.0-55.114.1": {
+      "compatibleMqVRMs": {
+        "10.0.x": {
+          "testedVrmf": "10.0.1.0",
+          "drbdKmod": "kmod-drbd-9.3.3+ptf.28.g6c10a1e64888_6.12.0_55.9.1-1",
+          "minVrmf": "10.0.1.0"
+        }
+      },
+      "status": "Compatible",
+      "comments": ""
+    },
+    "5.14.0-570.152.1": {
+      "compatibleMqVRMs": {
+        "10.0.0": {
+          "testedVrmf": "10.0.0.6",
+          "drbdKmod": "kmod-drbd-9.3.3+ptf.28.g6c10a1e64888_5.14.0_570.35.1-1",
+          "minVrmf": "10.0.0.0"
+        },
+        "9.3.0": {
+          "testedVrmf": "9.3.0.43",
+          "drbdKmod": "kmod-drbd-9.2.19+ptf.17.gfde162efd978_5.14.0_570.35.1-1",
+          "minVrmf": "9.3.0.0"
+        },
+        "10.0.x": {
+          "testedVrmf": "10.0.1.0",
+          "drbdKmod": "kmod-drbd-9.3.3+ptf.28.g6c10a1e64888_5.14.0_570.35.1-1",
+          "minVrmf": "10.0.1.0"
+        },
+        "9.4.x": {
+          "testedVrmf": "9.4.5.1",
+          "drbdKmod": "kmod-drbd-9.2.16_5.14.0_570.35.1-1",
+          "minVrmf": "9.4.5.0"
+        },
+        "9.4.0": {
+          "testedVrmf": "9.4.0.30",
+          "drbdKmod": "kmod-drbd-9.2.19+ptf.17.gfde162efd978_5.14.0_570.35.1-1",
+          "minVrmf": "9.4.0.0"
+        },
+        "9.2.0": {
+          "testedVrmf": "9.2.0.46",
+          "drbdKmod": "kmod-drbd-9.2.15_5.14.0_570.12.1-1",
+          "minVrmf": "9.2.0.0"
+        }
+      },
+      "status": "Compatible",
+      "comments": ""
+    },
+    "6.12.0-55.115.1": {
+      "compatibleMqVRMs": {
+        "10.0.x": {
+          "testedVrmf": "10.0.1.0",
+          "drbdKmod": "kmod-drbd-9.3.3+ptf.28.g6c10a1e64888_6.12.0_55.9.1-1",
+          "minVrmf": "10.0.1.0"
+        }
+      },
+      "status": "Compatible",
+      "comments": ""
     }
   },
   "latestKnownCompatibleKernelLevels": {
@@ -10962,7 +11031,7 @@
       "RHEL9": "5.14.0-687.61.1"
     },
     "10.0.x": {
-      "RHEL10": "6.12.0-211.68.1",
+      "RHEL10": "6.12.0-211.69.1",
       "RHEL8": "4.18.0-553.179.1",
       "RHEL9": "5.14.0-687.61.1"
     }
